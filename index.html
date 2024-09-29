@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Đầu Tiên</title>
+    <title>IP Getter</title>
+    <script>
+        async function getIP() {
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            document.body.innerText = data.ip;
+        }
+        getIP();
+    </script>
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tôi!</h1>
-    <p>Đây là trang web đầu tiên của tôi được tạo bằng GitHub Pages.</p>
 </body>
 </html>
